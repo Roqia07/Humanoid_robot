@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem10_collision">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00605009249408056 0.264264543441302 0.0389219155545338"
+        rpy="0 0 0" />
+      <mass
+        value="0.19587170304" />
+      <inertia
+        ixx="0.000117298247952399"
+        ixy="1.39712888892882E-06"
+        ixz="1.00957515737441E-05"
+        iyy="6.67796077184977E-05"
+        iyz="-5.8540741610949E-06"
+        izz="7.74057409010267E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="hip_Link">
+    <inertial>
+      <origin
+        xyz="-0.00114557605052779 0.0220625073399884 0.00695392485978443"
+        rpy="0 0 0" />
+      <mass
+        value="0.19587170304" />
+      <inertia
+        ixx="0.000117298247952399"
+        ixy="1.39712888892882E-06"
+        ixz="1.00957515737441E-05"
+        iyy="6.67796077184977E-05"
+        iyz="-5.85407416109491E-06"
+        izz="7.74057409010267E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/hip_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/hip_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.00490451644355278 0.242202036101313 0.0319679906947494"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="0.055"
+      velocity="5.82" />
+  </joint>
+  <link
+    name="thigh_Link">
+    <inertial>
+      <origin
+        xyz="0.0261495186388976 -0.0198067217703598 0.00627730656543416"
+        rpy="0 0 0" />
+      <mass
+        value="0.0994035000000124" />
+      <inertia
+        ixx="5.105531110474E-05"
+        ixy="2.7455668402762E-07"
+        ixz="-4.32165853073013E-06"
+        iyy="2.94940062908488E-05"
+        iyz="6.55254894874466E-08"
+        izz="6.81319786664833E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/thigh_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76078431372549 0.4 0.180392156862745 0.3" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/thigh_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thigh_joint"
+    type="revolute">
+    <origin
+      xyz="-0.018837938117524 -0.0273400000000003 -0.00447732756489142"
+      rpy="0 0 0" />
+    <parent
+      link="hip_Link" />
+    <child
+      link="thigh_Link" />
+    <axis
+      xyz="0.97268246579192 0 0.232139657837584" />
+    <limit
+      lower="0"
+      upper="1.0472"
+      effort="0.055"
+      velocity="5.82" />
+  </joint>
+  <link
+    name="leg_Link">
+    <inertial>
+      <origin
+        xyz="-0.0251596475541772 -0.0123177897353391 -0.0117160764491841"
+        rpy="0 0 0" />
+      <mass
+        value="0.232589231399243" />
+      <inertia
+        ixx="0.000259439788496201"
+        ixy="-3.07521141652448E-19"
+        ixz="-5.2226417020026E-06"
+        iyy="0.000101628555227277"
+        iyz="-1.15095289138836E-19"
+        izz="0.0002800766147297" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/leg_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76078431372549 0.4 0.180392156862745 0.3" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/leg_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.0525166155100644 -0.0941100000000001 0.0125700578600222"
+      rpy="0 0 0" />
+    <parent
+      link="thigh_Link" />
+    <child
+      link="leg_Link" />
+    <axis
+      xyz="0.97268246579192 0 0.232139657837584" />
+    <limit
+      lower="-0.523"
+      upper="1.0472"
+      effort="0.055"
+      velocity="5.82" />
+  </joint>
+  <link
+    name="foot1_Link">
+    <inertial>
+      <origin
+        xyz="-0.0258158892683436 -0.00101344838147411 0.0155562121129952"
+        rpy="0 0 0" />
+      <mass
+        value="0.122380765316662" />
+      <inertia
+        ixx="8.34219271731225E-05"
+        ixy="2.72963463102564E-06"
+        ixz="-1.17649912220833E-06"
+        iyy="5.41780744582801E-05"
+        iyz="7.98072725955848E-06"
+        izz="8.0647826410963E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/foot1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76078431372549 0.4 0.180392156862745 0.3" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/foot1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot1_joint"
+    type="revolute">
+    <origin
+      xyz="0.00157547080421877 -0.0927520361013132 -0.00660134007651164"
+      rpy="0 -0.234276857085508 0" />
+    <parent
+      link="leg_Link" />
+    <child
+      link="foot1_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.523"
+      effort="0.055"
+      velocity="5.83" />
+  </joint>
+  <link
+    name="foot2_Link">
+    <inertial>
+      <origin
+        xyz="0.00292714476125744 0.00425203610131364 -0.0137082317087299"
+        rpy="0 0 0" />
+      <mass
+        value="0.0845000000000001" />
+      <inertia
+        ixx="4.80027962059938E-05"
+        ixy="-3.22815496642855E-20"
+        ixz="3.30560060466208E-06"
+        iyy="2.34417083333333E-05"
+        iyz="-9.18162999687482E-20"
+        izz="3.49409954606732E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/foot2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76078431372549 0.4 0.180392156862745 0.3" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem10_collision/meshes/foot2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.017637305017043 -0.092752036101313 -0.0322623837192966"
+      rpy="0 0 0" />
+    <parent
+      link="leg_Link" />
+    <child
+      link="foot2_Link" />
+    <axis
+      xyz="-0.232139657837584 0 0.97268246579192" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0.055"
+      velocity="5.83" />
+  </joint>
+</robot>
