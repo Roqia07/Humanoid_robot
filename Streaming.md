@@ -1,1 +1,2 @@
-// streaming methods and computervision
+# Streaming Method
+- used Gstreamer instead of mjpeg 
