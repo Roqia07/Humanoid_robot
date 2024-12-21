@@ -9,7 +9,7 @@ MPU6050 mpu; // MPU6050 default I2C address is 0x68
 
 
 #define OUTPUT_READABLE_YAWPITCHROLL
-int const INTERRUPT_PIN = 2;  // Define the interruption #0 pin
+int const INTERRUPT_PIN = PB9;
 bool blinkState;
 
 /*---MPU6050 Control/Status Variables---*/
